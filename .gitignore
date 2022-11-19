@@ -364,3 +364,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /ModernIconExcelAddin/公開
 /ModernIIconPowerPointAddin/公開
+/ProgressBarExcelAddin/公開
+/ProgressBarPowerPointAddin/公開
