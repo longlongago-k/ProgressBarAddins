@@ -109,8 +109,12 @@ namespace ProgressBarExcelAddin
                 shp.Fill.TwoColorGradient(Microsoft.Office.Core.MsoGradientStyle.msoGradientVertical, 1);
                 shp.Fill.GradientStops.Insert(forecolor, 0, Index: 1);
                 shp.Fill.GradientStops.Insert(forecolor, value, Index: 2);
-                shp.Fill.GradientStops.Insert(bgcolor, value + 0.0001f, Index: 3);
-                shp.Fill.GradientStops.Insert(bgcolor, 1.0f, Index: 4);
+                value = value + 0.0001f;
+                if (value < 1f)
+                {
+                    shp.Fill.GradientStops.Insert(bgcolor, value, Index: 3);
+                    shp.Fill.GradientStops.Insert(bgcolor, 1.0f, Index: 4);
+                }
                 while (shp.Fill.GradientStops.Count > 4)
                     shp.Fill.GradientStops.Delete();
             }
