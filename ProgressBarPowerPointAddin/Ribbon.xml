@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon startFromScratch="false">
+    <contextualTabs>
+      <tabSet idMso="TabSetDrawingTools">
+        <tab idMso="TabDrawingToolsFormat">
+          <group id="group1" label="進捗" insertAfterMso="GroupWordArtStyles">
+            <button id="buttonShapeProgress" label="進捗でFill"
+                         screentip="Text" onAction="OnButtonShapeProgressButton"
+                         supertip="進捗%で塗りつぶします."
+                         getImage="buttonShapeProgress_GetImage" size="large"
+                    />
+          </group>
+        </tab>
+      </tabSet>
+    </contextualTabs>
+  </ribbon>
+</customUI>
+
